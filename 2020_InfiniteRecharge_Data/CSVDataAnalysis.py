@@ -2,14 +2,16 @@ import csv
 
 #  ========================================================
 
-file_name = "2020calndata.csv"
+file_name = "2020calndata"
 output_title = ["Team", "Auto Init Points", "Auto Cells", "Tele Cells", "Control Panel", "End Game Points", "Score"]
-# Should be a list of
+
+# List of weights for each corresponding column
 auto_init_wt = 0
 auto_cell_wt = 0
 tele_cell_wt = 0
 control_panel_wt = 0
 end_game_wt = 0
+
 weights = [auto_init_wt, auto_cell_wt, tele_cell_wt, control_panel_wt, end_game_wt]
 
 #  ========================================================
@@ -18,7 +20,7 @@ title = []
 team_data = []
 
 # Open File
-with open(file_name) as csv_file:
+with open(file_name + ".csv") as csv_file:
     # Use csv to parse the file
     csv_file = csv.reader(csv_file, delimiter=',')
 
