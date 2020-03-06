@@ -13,3 +13,10 @@ On the output file, an overall sheet shows the ranking of teams as well as their
 ### 2020 Scouting Data Analysis
 ------
 Using data from thebluealliance API, rank teams based upon performance in previous matches.  
+#### CSVDataAnalysis.py
+Takes in CSV file with avg data on each team and multiplies each avg by a weight to obtain a score for ranking the teams at the regional. Outputs a CSV with the ranked teams and their associated weights and score.
+
+To modify per regional/year:
+`file_name` is the input CSV file name (ex. "2020calndata")
+`output_title` is the first row header for the output CSV file
+`weights` is a list of weights to multiply each game score by
